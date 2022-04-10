@@ -16,7 +16,7 @@ export class CartService {
 
   // Delete an item from the cart
   deleteItem(product: Product) {
-    return this.items.filter((item) => item.id !== product.id);
+    this.items = this.items.filter((item) => item.id !== product.id);
   }
 
   // Get all items in the cart

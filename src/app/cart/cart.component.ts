@@ -13,7 +13,12 @@ export class CartComponent implements OnInit {
   items: Product[] = this.cartService.getItems();
 
   deleteItem(product: Product) {
+    // Delete item from cart
     this.cartService.deleteItem(product);
+
+    // Update the cart state
+    this.items = this.cartService.getItems();
+
     window.alert(product.name + ' has been removed from the cart.');
   }
 
