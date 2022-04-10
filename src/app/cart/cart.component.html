@@ -4,6 +4,7 @@
   >{{ ' ' }}
   <span>{{ item.price | currency }}</span>
   <br />
+  <button (click)="deleteItem(item)">Remove from Cart</button>
 </div>
 <div *ngIf="items.length === 0">
   <p>Your cart is empty!</p>

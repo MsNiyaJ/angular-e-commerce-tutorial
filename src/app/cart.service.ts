@@ -14,6 +14,11 @@ export class CartService {
     this.items.push(product);
   }
 
+  // Delete an item from the cart
+  deleteItem(product: Product) {
+    return this.items.filter((item) => item.id !== product.id);
+  }
+
   // Get all items in the cart
   getItems() {
     return this.items;
