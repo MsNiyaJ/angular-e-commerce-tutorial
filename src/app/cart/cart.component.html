@@ -1,13 +1,14 @@
 <h2>Checkout</h2>
+<p>
+  <a routerLink="/shipping">View Shipping Prices</a>
+</p>
 <div *ngFor="let item of items">
-  <p>
-    <a routerLink="/shipping">View Shipping Prices</a>
-  </p>
-  <span>{{ item.name }}</span
-  >{{ ' ' }}
+  <span>{{ item.name + ' ' }} </span>
   <span>{{ item.price | currency }}</span>
-  <br />
-  <button (click)="deleteItem(item)">Remove from Cart</button>
+
+  <div>
+    <button (click)="deleteItem(item)">Remove from Cart</button>
+  </div>
   <br />
 </div>
 <div *ngIf="items.length === 0">
